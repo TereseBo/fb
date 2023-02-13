@@ -1,6 +1,6 @@
 
 async function getIt(adress="/"){
-    let res=fetch("http://localhost:3000/")
+    let res=fetch("/")
     const data = await res.json();
     console.log(data);
     if (res.ok) {
