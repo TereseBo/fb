@@ -5,11 +5,19 @@ var serveStatic = require('serve-static')
 
 const app = express()
 const port = 3000
-app.use(serveStatic('files', { index: ['default.html'] }))
+
+app.use(serveStatic('files', { index: ['default.html'], db:['db.json'] }))
+
 app.get('/front', (req, res) => {
+
+    console.log(req)
+    console.log(res)
+  res.send('bibbi')
+})
+app.get('/db', (req, res) => {
     
     console.log(req)
-  res.send('hello w')
+  res.sendFile(db)
 })
 
 app.listen(port, () => {
