@@ -1,11 +1,11 @@
 
 async function getIt(adress="/"){
     let res=fetch("/")
-    const data = await res.json();
-    console.log(data);
+    //const data = await res.json();
+    //console.log(data);
     if (res.ok) {
         console.log("GET successful");
-        return data;
+        return res;
     } else {
         console.log("GET failed");
         return null;
